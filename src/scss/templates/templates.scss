@@ -1,0 +1,22 @@
+//______Size to rem___________________________________
+$fontSizeRem: 16px;
+@function rem($size) {
+  @return calc($size / $fontSizeRem*1rem);
+}
+html {
+  font-size: calc(($fontSizeRem/$fontSizeRem)*100%);
+}
+
+//______Img in background___________________________________
+._ibg {
+  position: relative;
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+//___________________________________
