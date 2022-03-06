@@ -1,0 +1,47 @@
+<!-- HTML -->
+&nbsp; <!--Неразрывный пробел -->
+<!------------------------------------->
+
+<!---Meta-теги------------------------->
+<meta charset='UTF-8'> <!--Поддержка кириллицы-->
+<meta name='viewport' content='width=1170px'> <!--Фиксированная страница-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Адаптивная верстка-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0"><!--Запретить увеличение на телефоне-->
+<!------------------------------------->
+
+<!-- SCSS -->
+
+<!-- z-index для before & after -->
+.block {
+  transform-style: preserve-3d;
+  &::before {
+    transform: translateZ(-1px);
+  }
+}
+<!------------------------------------->
+<!-- Color scss -->
+transparent   <!-- Устанавливает прозрачный фон. -->
+inherit       <!-- Наследует значение родителя. -->
+<!------------------------------------->
+<!-- Добавление шрифта -->
+@font-face {
+   font-family: "Montserrat";
+   font-style: normal;
+   font-weight: 400;
+   /* Браузер сначала попробует найти шрифт локально */
+   src: local("Roboto"),
+   /* Если не получилось, загрузит woff2 */
+   url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+   /* Если браузер не поддерживает woff2, загрузит woff */
+   url("../fonts/Montserrat-Regular.woff") format("woff");
+}
+<!------------------------------------->
+<!-- Перенос текста -->
+white-space: nowrap;
+Значение:	  Перенос текста:	  Пробелы
+normal	    Переносится	      Не учитываются
+nowrap	    Не переносится	  Не учитываются
+pre	        Не переносится	  Учитываются
+pre-line	  Переносится	      Не учитываются
+pre-wrap	  Переносится	      Учитываются
+<!------------------------------------->
