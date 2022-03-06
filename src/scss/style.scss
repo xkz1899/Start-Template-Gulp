@@ -1,0 +1,57 @@
+@import "./templates/null.scss";
+@import "./templates/templates.scss";
+@import "./templates/mixin.scss";
+//Add Fonts
+@import "./fonts/fonts.scss";
+@import "./fonts/fonts-icons.scss";
+
+//Sizes container
+$maxWidth: 1200;
+$safetyIndents: 15;
+
+//Font properties
+$fontFamily: "Roboto";
+$fontWeight: 400;
+$fontStyle: normal;
+$fontSize: rem(16px);
+
+//Main colors
+$mainColor: #fff;
+$mainBackground: #333;
+
+body {
+  font-family: $fontFamily, sans-serif;
+  font-weight: $fontWeight;
+  font-style: $fontStyle;
+  font-size: $fontSize;
+  color: $mainColor;
+  background: $mainBackground;
+}
+.wrapper {
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+[class*="container"] {
+  max-width: #{$maxWidth + px};
+  margin: 0 auto;
+  padding: 0 #{$safetyIndents + px};
+  box-sizing: content-box;
+  //@media (max-width: 1200px){
+  //    max-width: 970px;
+  ///}
+  //@media (max-width: 992px){
+  //    max-width: 750px;
+  //}
+  //@media (max-width: 767px){
+  //    max-width: none;
+  //}
+}
+
+//Add chunk scss
+@import "./chunk/header.scss";
+@import "./chunk/main.scss";
+@import "./chunk/footer.scss";
+//@import "./chunk/burger.scss";

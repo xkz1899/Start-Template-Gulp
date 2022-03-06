@@ -1,0 +1,8 @@
+
+$maxWidth: 1200;
+$minWidth: 320;
+@mixin adaptiv($name,$pcSize, $mobSize) {
+ $addSize: $pcSize - $mobSize;
+ $maxWidth: $maxWidth - $minWidth;
+ #{$name}: calc(#{$mobSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidth}));
+}
