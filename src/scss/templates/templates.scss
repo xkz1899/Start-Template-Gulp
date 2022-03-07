@@ -21,7 +21,7 @@ html {
 }
 //______Burger________________________________________________
 $color-burger:#fff;
-._burger {
+[class*='burger'] {
   position: relative;
   width: rem(30px);
   height: rem(18px);
@@ -48,7 +48,7 @@ $color-burger:#fff;
     bottom: 0;
   }
 }
-._burger-close {
+[class*='burger-close']{
   span {
     transform: rotate(45deg);
   }
