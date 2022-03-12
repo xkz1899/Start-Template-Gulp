@@ -1,5 +1,5 @@
 import fileinclude from "gulp-file-include";
-import webHtmlNosvg from "gulp-webp-html-nosvg";
+import webHtmlNosvg from "gulp-webp-in-html";
 import versionNumber from "gulp-version-number"; //Отмена кеша браузера
 import pug from "gulp-pug";
 
