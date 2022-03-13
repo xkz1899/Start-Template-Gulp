@@ -8,7 +8,7 @@ html {
 }
 
 //______Img in background___________________________________
-._ibg {
+[class*='_ibg'] {
   position: relative;
   img {
     position: absolute;
