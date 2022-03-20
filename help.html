@@ -147,3 +147,23 @@ arr.includes("One");
 <!-- Получить позицию в массиве начиная с элемента №2 -->
 arr.indexOf("One",2);
 <!------------------------------------->
+<!-- Scroll -->
+
+<!-- Библиотека для поддержки скрола на маках -->
+<script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js"></script>
+<!-- Отмена стандартных функций и поиск элемента, удаление хеша (#)-->
+  e.preventDefault();
+  const href = link.getAttribute('href').substring(1);
+  const sect = document.getElementById(href);
+<!-- Работа со скролом при помощи библиотеки --> 
+  seamless.scrollIntoView(sect, {
+    behavior: "smooth",
+    block: "center",
+    inline: "center",
+  });
+<!-- Работа без библиотеки(На маках нет поддерки плавного скролла) -->
+  sect.scrollIntoView ({
+    block: 'start',
+     behavior: 'smooth',
+   });
+<!------------------------------------->
