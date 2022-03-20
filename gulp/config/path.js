@@ -14,6 +14,7 @@ export const path = {
     fonts: `${buildFolder}/fonts/`,
     files: `${buildFolder}/files/`,
     favicon: `${buildFolder}/`,
+    libraries: `${buildFolder}/js/libraries/`,
   },
   src: {
     js: `${srcFolder}/js/main.js`,
@@ -24,6 +25,7 @@ export const path = {
     fonts: `${srcFolder}/fonts/*.*`,
     files: `${srcFolder}/files/**/*.*`,
     favicon: `${srcFolder}/*.*`,
+    libraries: `${srcFolder}/libraries/*.*`,
     svgicons: `${srcFolder}/svgicons/*.svg`,
   },
   watch: {
