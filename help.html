@@ -171,3 +171,49 @@ arr.indexOf("One",2);
      behavior: 'smooth',
    });
 <!------------------------------------->
+
+
+<!-- Аккордеон -->
+  const title = document.querySelectorAll('.title'); 
+
+  title.forEach(item=>{
+    item.addEventListener('click',(e)=>{
+          title.forEach((items) => {
+            items.nextElementSibling.classList.add("hide"); <!-- Подменю -->
+            items.classList.remove("active"); <!-- Поворот стрелки -->
+          });
+          item.nextElementSibling.classList.toggle("hide");
+          item.classList.toggle("active");
+    });
+  });
+
+<!------------------------------------->
+
+<!-- Создание вкладок с помощь data-атрибута -->
+
+  const btn = document.querySelectorAll(".button");
+  const desc = document.querySelectorAll(".description");
+
+  btn.forEach(item=>{
+    item.addEventListener("click", (e)=>{
+      <!-- Переключения статьи(Описания) -->
+      const buttons = item.dataset.btn; <!-- btn - название дата data-атрибута -->
+      dec.forEach(items=>{
+        if(buttons === items.dataset.description) { <!-- description - это data атрибуд внутриннего контента -->
+          items.classList.remove("hide");
+        }else {
+          items.classList.add("hide");
+        }
+      });
+      <!-- Переключение кнопки(Заголовка) -->
+      btn.forEach(btnItems =>{
+        if(btnItems === e.target) {
+          btnItems.classList.add("active");
+        }else {
+          btnItem.classList.remove("active");
+        }
+      });
+    });
+  });
+
+<!------------------------------------->
