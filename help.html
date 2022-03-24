@@ -217,3 +217,20 @@ arr.indexOf("One",2);
   });
 
 <!------------------------------------->
+
+<!-- Фикзация header при скролле -->
+<!-- Старт функции meFunction при скролле страницы -->
+window.onscroll = function () {myFunction();};
+<!-- Получение header -->
+const header = document.querySelector(".header");
+<!-- Получение смещения позиции header -->
+let sticky = header.offsetTop;
+<!-- Добавление класса при скролле к header -->
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("headers");
+  } else {
+    header.classList.remove("headers");
+  }
+}
+<!------------------------------------->
