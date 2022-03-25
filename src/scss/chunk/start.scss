@@ -6,10 +6,10 @@
 @import "../fonts/fonts-icons.scss";
 
 $maxWidth: 1200;
-$fontSize: rem(16px);
+$fontSize: 16px;
 
 body {
-  font-size: $fontSize;
+  font-size: rem($fontSize);
 }
 .wrapper {
   overflow: hidden;
