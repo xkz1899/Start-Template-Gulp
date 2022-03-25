@@ -293,3 +293,23 @@ btn.onclick = function () {
   };
 
 <!------------------------------------->
+
+<!-- Появление кнопки скролла к top 0 -->
+
+  window.onscroll = () => {
+    top();
+  };
+
+  function top() {
+    const scroll = document.querySelector(".scroll");
+    if (window.pageYOffset >= innerHeight) {
+      scroll.classList.add("scroll-active");
+    } else {
+      scroll.classList.remove("scroll-active");
+    }
+  }
+  document.querySelector(".scroll").onclick = () => {
+    document.querySelector(".wrapper").scrollIntoView({ behavior: "smooth" });
+  };
+
+<!------------------------------------->
