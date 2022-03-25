@@ -313,3 +313,21 @@ btn.onclick = function () {
   };
 
 <!------------------------------------->
+
+<!-- Возвращает расстояние текущего элемента по отношению к верхней части -->
+	.offsetTop 
+<!------------------------------------->
+
+<!-- Плавный скролл с помощью scrollTo -->
+
+  const btn = document.querySelector(".button");
+  const wrapp = document.querySelector(".wrapper").offsetTop;
+
+  btn.addEventListener('click',(e)=>{
+     window.scrollTo({
+       top: wrapp,
+       behavior: "smooth",
+     });
+  });
+
+<!------------------------------------->
