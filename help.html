@@ -176,3 +176,11 @@ Element.insertAdjacentElement(position, element);
 'beforeend': внутри элемента Element, после его последнего потомка.
 'afterend': после самого элемента Element.
 <!------------------------------------->
+
+<!-- Задержка -->
+  setTimeout(Функция, задержка, аргумент функции)
+  setTimeout(start, 1000);
+ <!--  Бесконечный вызов фунции с интервалом -->
+  function start() {setTimeout(start, 1000);}
+  setTimeout(start, 1000);
+<!------------------------------------->
