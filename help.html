@@ -134,200 +134,63 @@ const isMobile = {
   arr.pop(); 
 <!-- Удаляет, но оставляет пустую ячейку -->
   delete arr[1];
-  <!-- Удаляет, splice(x1,x2) x1 - позиция старта x2 - количество удаляемых элементов -->
+<!-- Удаляет, splice(x1,x2) x1 - позиция старта x2 - количество удаляемых элементов -->
   arr.splice(1,3); 
 <!-- Заменяет объект, splice(x1,x2,"xxx") x1 - позиция старта x2 - количество элементов которые будут заменены "xxx" - на что будет заменен -->
   arr.splice(1, 1, "xxx"); 
-  <!-- Удаляет последний элемент -->
+<!-- Удаляет последний элемент -->
   arr.splice(-1,1); 
 <!-- Вставить элементы не удаляя элементы -->
-arr.splice(0, 0, "-1", "0" ); 
+  arr.splice(0, 0, "-1", "0" ); 
 <!-- Копирует элементы массива slice(x1,x2) x1 - позиция старта x2 - конечная позиция, не включая её-->
-arr.slice(1,2);
+  arr.slice(1,2);
 <!-- Копирование слева направо -->
-arr.slice(-2,-1);
+  arr.slice(-2,-1);
 <!-- Скопировать весь массив -->
-arr.slice();
+  arr.slice();
 <!-- Скопировать весь массив и добавить элементы -->
-arr.concat(6, 7);
+  arr.concat(6, 7);
 <!-- Получить позицию в массиве -->
-arr.indexOf("One");
+  arr.indexOf("One");
 <!-- Возвращает true & false -->
-arr.includes("One");
+  arr.includes("One");
 <!-- Получить позицию в массиве начиная с элемента №2 -->
-arr.indexOf("One",2);
-<!------------------------------------->
-<!-- Scroll Seamless-Scroll-Polyfill-->
-
-<!-- Библиотека для поддержки скрола на маках -->
-<script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js"></script>
-<!-- Отмена стандартных функций и поиск элемента, удаление хеша (#)-->
-  e.preventDefault();
-  const href = link.getAttribute('href').substring(1);
-  const sect = document.getElementById(href);
-<!-- Работа со скролом при помощи библиотеки --> 
-  seamless.scrollIntoView(sect, { <!-- sect - путь с # до елемента скролла, querySelector('#item-1') -->
-    behavior: "smooth",
-    block: "center",
-    inline: "center",
-  });
-<!-- Работа без библиотеки(На маках нет поддерки плавного скролла) -->
-  sect.scrollIntoView ({
-    block: 'start',
-     behavior: 'smooth',
-   });
+  arr.indexOf("One",2);
 <!------------------------------------->
 
-<!-- Аккордеон -->
-  const title = document.querySelectorAll('.title'); 
-
-  title.forEach(item=>{
-    item.addEventListener('click',(e)=>{
-          title.forEach((items) => {
-            items.nextElementSibling.classList.add("hide"); <!-- Подменю -->
-            items.classList.remove("active"); <!-- Поворот стрелки -->
-          });
-          item.nextElementSibling.classList.toggle("hide");
-          item.classList.toggle("active");
-    });
-  });
-
+<!-----Узнать координаты мыши------>
+event.clientX
+event.clientY
+event.pageX
+event.pageY
 <!------------------------------------->
 
-<!-- Создание вкладок с помощь data-атрибута -->
-
-  const btn = document.querySelectorAll(".button");
-  const desc = document.querySelectorAll(".description");
-
-  btn.forEach(item=>{
-    item.addEventListener("click", (e)=>{
-      <!-- Переключения статьи(Описания) -->
-      const buttons = item.dataset.btn; <!-- btn - название дата data-атрибута -->
-      dec.forEach(items=>{
-        if(buttons === items.dataset.description) { <!-- description - это data атрибуд внутриннего контента -->
-          items.classList.remove("hide");
-        }else {
-          items.classList.add("hide");
-        }
-      });
-      <!-- Переключение кнопки(Заголовка) -->
-      btn.forEach(btnItems =>{
-        if(btnItems === e.target) {
-          btnItems.classList.add("active");
-        }else {
-          btnItem.classList.remove("active");
-        }
-      });
-    });
-  });
-
+<!-----Возвращает расстояние текущего элемента по отношению к верхней части----->
+Element.offsetTop
 <!------------------------------------->
 
-<!-- Фиксация header при скролле -->
-<!-- Старт функции meFunction при скролле страницы -->
-window.onscroll = function () {myFunction();};
-<!-- Получение header -->
-const header = document.querySelector(".header");
-<!-- Получение смещения позиции header -->
-let sticky = header.offsetTop;
-<!-- Добавление класса при скролле к header -->
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    header.classList.add("headers");
-  } else {
-    header.classList.remove("headers");
-  }
-}
+<!-----Получить px при скролле------>
+window.pageYOffset
+window.pageXOffset
 <!------------------------------------->
 
-<!-- Скрытие header при скролле вниз -->
-
-const header = document.querySelector('.header');
-let prevScrollpos = window.pageYOffset;
-
-window.onscroll = function () {
-  let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    header.style.top = "0";
-  } else {
-    header.style.top = "-70px";
-  }
-  prevScrollpos = currentScrollPos;
-};
+<!-----Действи при скролле страницы------>
+onscroll = () => {}
 <!------------------------------------->
 
-<!-- Анимация -->
-
-const btn = document.querySelector('.button');
-
-btn.onclick = function () {
-  let start = Date.now();
-
-  let timer = setInterval(function () {
-    let timePassed = Date.now() - start;
-
-    btn.style.left = timePassed / 5 + "px";
-
-    if (timePassed > 2000) clearInterval(timer);
-  }, 20);
-}
-
+<!-----Циклы------>
+for (let i = 0; i < 5; i++) {}
+for(let key to arr) {}
+for(let key in arr) {}
+arr.forEach((item, index, arr) =>{});
+while (i<5){}
+do{}while(i<5)
 <!------------------------------------->
 
-<!-- Появление кнопки скролла к top 0 -->
-
-  window.onscroll = function () {
-    top();
-  };
-
-  function top() {
-    const scroll = document.querySelector(".scroll");
-    if (window.pageYOffset >= innerHeight) {
-      scroll.classList.add("scroll-active");
-    } else {
-      scroll.classList.remove("scroll-active");
-    }
-  }
-  document.querySelector(".scroll").onclick = () => {
-    document.querySelector(".wrapper").scrollIntoView({ behavior: "smooth" });
-  };
-
+<!-----Плавный скролл к элементу------>
+scrollTo({
+top: element,
+behavior: "smooth",
+});
 <!------------------------------------->
 
-<!-- Появление кнопки скролла к top 0 -->
-
-  window.onscroll = () => {
-    top();
-  };
-
-  function top() {
-    const scroll = document.querySelector(".scroll");
-    if (window.pageYOffset >= innerHeight) {
-      scroll.classList.add("scroll-active");
-    } else {
-      scroll.classList.remove("scroll-active");
-    }
-  }
-  document.querySelector(".scroll").onclick = () => {
-    document.querySelector(".wrapper").scrollIntoView({ behavior: "smooth" });
-  };
-
-<!------------------------------------->
-
-<!-- Возвращает расстояние текущего элемента по отношению к верхней части -->
-	.offsetTop 
-<!------------------------------------->
-
-<!-- Плавный скролл с помощью scrollTo -->
-
-  const btn = document.querySelector(".button");
-  const wrapp = document.querySelector(".wrapper").offsetTop;
-
-  btn.addEventListener('click',(e)=>{
-     window.scrollTo({
-       top: wrapp,
-       behavior: "smooth",
-     });
-  });
-
-<!------------------------------------->
