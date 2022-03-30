@@ -184,3 +184,20 @@ Element.insertAdjacentElement(position, element);
   function start() {setTimeout(start, 1000);}
   setTimeout(start, 1000);
 <!------------------------------------->
+	
+<!--  Поиск в DOM -->
+<!-- Получить элемент по id -->
+  document.getElementById("name")
+<!-- Получить все элементы по тегу -->
+  document.getElementsByTagName("LI")
+<!-- Получить все дочерний эмементы родителя -->
+  element.getElementsByTagName("*")
+<!-- Получить элементы с атрибутом name -->
+  document.getElementsByName("name")
+<!-- Получить элементы по классу -->
+  document.getElementsByClassName("name");
+<!-- Получить элемент по селектору -->
+  document.querySelector(".name")
+<!-- Получить элементы по селектору -->
+  document.querySelectorAll(".name")
+<!------------------------------------->
