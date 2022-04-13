@@ -230,3 +230,10 @@ element.children
 <!-- Все дочерние элементы и текстовые узлы -->
 element.childNodes[1]
 <!------------------------------------->
+
+<!-- Случайное число -->
+function randomInteger(min, max) {
+  let rand = min + Math.random() * (max + 1 - min);
+  return Math.floor(rand);
+}
+<!------------------------------------->
