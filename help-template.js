@@ -179,3 +179,27 @@ btnC.onclick = function () {
 }
 
 /* ------------------------------------- */
+
+ /* Следование за курсором  */
+function down(e, X, Y, item) {
+  e.preventDefault();
+  work = true;
+  posit.x1 = X;
+  posit.y1 = Y;
+  posit.x3 = posit.x1 - item.offsetLeft;
+  posit.y3 = posit.y1 - item.offsetTop;
+}
+function move(e, X, Y, item) {
+  if (work) {
+    posit.x2 = X - posit.x1 - posit.x3;
+    posit.y2 = Y - posit.y1 - posit.y3;
+    posit.resultX = posit.x2 + posit.x1;
+    posit.resultY = posit.y2 + posit.y1;
+    item.style.left = `${posit.resultX}px`;
+    item.style.top = `${posit.resultY}px`;
+  }
+}
+function up() {
+  work = false;
+}
+/* ------------------------------------- */
