@@ -173,6 +173,15 @@ Element.insertAdjacentElement(position, element);
 'afterend': <!-- после самого элемента Element. -->
 <!------------------------------------->
 
+<!-----Вставить элемент в DOM------> 
+Element.before(item); <!-- перед элементом Element. -->
+Element.prepend(item); <!-- Внутри элемента Element, перед его содержимым. -->
+Element.append(item); <!-- Внутри элемента Element, после содержимого. -->
+Element.after.(item); <!-- После элемента Element. -->
+Element.insertBefore(element, item) <!-- Вторым параметром элемент, перед которым нужно вставлять. -->
+Element.removeChild(item) <!-- Удалить дочерний элемент -->
+<!------------------------------------->
+
 <!-- Задержка -->
   setTimeout(Функция, задержка, аргумент функции)
   setTimeout(start, 1000);
