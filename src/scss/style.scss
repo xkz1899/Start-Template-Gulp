@@ -4,7 +4,6 @@
 //Add Fonts
 @import "./fonts/fonts.scss";
 @import "./fonts/fonts-icons.scss";
-//Add chunk scss
 
 //Sizes container
 $maxWidth: 1200;
@@ -51,6 +50,7 @@ body {
   //}
 }
 
+//Add chunk scss
 @import "./chunk/header.scss";
 @import "./chunk/main.scss";
 @import "./chunk/footer.scss";
