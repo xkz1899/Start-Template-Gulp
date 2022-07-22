@@ -457,6 +457,7 @@ $font-family: "Montserrat";
       document.cookie; <!-- Чтение cookie -->
       document.cookie = "zzz=XXX; expires=" + new Date(Date.now() + 86400e3).toUTCString();  <!-- +1 день от текущей даты -->
       document.cookie = "user=John; max-age=3600"; <!-- Cookie будет удалено через 1 час -->
+      document.cookie = "user=John; max-age=0"; <!-- Удалить Cookie -->
       document.cookie = "user=John; secure";  <!-- Установим опцию secure для куки (куки доступно только через HTTPS) -->
       document.cookie = "user=John; samesite=strict"; <!-- Cookie с samesite=strict никогда не отправятся, если пользователь пришёл не с этого же сайта. -->
       document.cookie = "user=John; samesite=lax";  <!-- Это более мягкий вариант -->
